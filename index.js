@@ -47,7 +47,7 @@ let apiKey = 'b23a80efd7304a348f6cce8ab13a43b8'
 
 function getData() {
     // console.log("Started getData")
-    url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`;
     fetch(url).then((response) => {
         return response.json();
     }).then((data) => {
@@ -55,7 +55,7 @@ function getData() {
         // console.log(newsData);
         let newsHtml = "";
         newsData.forEach((values)=>{
-            news = `<div class="accordion" id="newsAccordion">
+            let news = `<div class="accordion" id="newsAccordion">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading">
                                     <div class="accordion-button" type=" " data-bs-toggle="collapse"
